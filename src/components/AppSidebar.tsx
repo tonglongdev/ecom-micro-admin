@@ -207,7 +207,7 @@ const AppSidebar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton>
-                  <User2 /> John Doe <ChevronUp className="ml-auto" />
+                  <User2 /> Tong Long Dev <ChevronUp className="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">

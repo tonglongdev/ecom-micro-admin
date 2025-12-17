@@ -1,5 +1,6 @@
 import AppSidebar from "@/components/AppSidebar";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -33,6 +34,12 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
       >
+         <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
         <SidebarProvider defaultOpen={defaultOpen}>
           <AppSidebar />
           <main className="w-full">
@@ -40,6 +47,7 @@ export default async function RootLayout({
             <div className="px-4">{children}</div>
           </main>
         </SidebarProvider>
+         </ThemeProvider>
       </body>
     </html>
   );
