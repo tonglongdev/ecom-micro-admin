@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ecom Micro Admin
+
+A modern, feature-rich admin dashboard for ecommerce. Built with [Next.js](https://nextjs.org) 15, React 19, and TypeScript, providing a comprehensive management interface for users, payments, and business analytics.
+
+## Features
+
+- **User Management** - View, search, and manage user accounts with detailed user profiles
+- **Payment Tracking** - Monitor and manage payment transactions with advanced data tables
+- **Analytics Dashboard** - Real-time insights with interactive charts (area, bar, line, and pie charts)
+- **Dark Mode Support** - Built-in theme switching with Next Themes
+- **Responsive Design** - Mobile-friendly interface using Tailwind CSS
+- **Form Validation** - Robust form handling with React Hook Form and Zod
+- **Data Tables** - Powerful table components with TanStack React Table for pagination and filtering
+- **Sidebar Navigation** - Collapsible sidebar for easy navigation
+
+## Tech Stack
+
+- **Framework:** Next.js 15 with App Router and Turbopack
+- **UI Library:** React 19
+- **Styling:** Tailwind CSS 4
+- **Component Library:** Radix UI
+- **Form Management:** React Hook Form + Zod
+- **Data Visualization:** Recharts
+- **Tables:** TanStack React Table
+- **Theme:** Next Themes with Dark Mode support
+- **Type Safety:** TypeScript
+- **Icons:** Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- pnpm (or npm/yarn/bun)
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install dependencies
+pnpm install
+
+# Run development server
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The page will auto-update as you edit files. Fast refresh is enabled with Turbopack for optimal development experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/                 # Next.js app directory
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Dashboard home
+│   ├── payments/       # Payment management
+│   └── users/          # User management
+├── components/         # Reusable React components
+│   ├── ui/            # Shadcn UI components
+│   └── providers/     # Context providers (Theme)
+└── lib/               # Utility functions
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Development
+pnpm run dev          # Start dev server with Turbopack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Production
+pnpm run build        # Build for production
+pnpm run start        # Start production server
+pnpm run lint         # Run ESLint
+```
 
-## Deploy on Vercel
+## Key Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Dashboard** - Main analytics and overview page (`/`)
+- **Users** - User management interface (`/users`)
+- **User Details** - Individual user profile (`/users/[username]`)
+- **Payments** - Payment transaction tracking (`/payments`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Development
+
+The project uses ESLint for code quality and follows Next.js best practices. TypeScript ensures type safety throughout the application.
+
+To modify components, edit files in the `src/components` directory. To add new pages, create them in the `src/app` directory following Next.js conventions.
+
+## License
+
+This project is private.
